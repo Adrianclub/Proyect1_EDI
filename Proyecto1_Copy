@@ -1,0 +1,34 @@
+
+ 
+//
+// Programa que muestra el texto ingresado por teclado en salida de pantalla
+// usando herramientas de libreria
+
+//  Para mejorar: el programa debería contar caracteres ingresados (srtlen) y utilizar
+//  asignacion dinámica de memoria (new/delete), de la manera que esta desarrollado el arreglo
+//  "texto" tiene una limitante de 50 caracteres determinado de manera arbitraria
+
+
+ #include<iostream>
+ #include<string.h>
+
+
+ int main()
+ {
+   char texto [50];
+   char a;
+   std::cout<< "\n Intruduzca texto :" <<std::endl;
+   std::cin.getline( texto,50,'\n'); // Funcion de libreria que toma linea
+
+
+	   std::cout<< "El texto ingresado es :" <<std::endl;
+		  for (int i = 0; i < 50; i++) {
+				a=texto[i];
+				std::cout << a;
+		  }
+
+
+  system ("pause");  // cin.ignore();
+                    // cin.get();
+   return 0;
+}
